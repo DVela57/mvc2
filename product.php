@@ -17,7 +17,7 @@
         }
 
         //devolber un producto
-        public function find($id)
+        public static function find($id)
         {
             return Product::PRODUCTS[$id -1];
         }
