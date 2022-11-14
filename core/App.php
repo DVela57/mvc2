@@ -17,7 +17,7 @@
             } else {
                 $method = "index";
             }
-            $file = "app/controllers/" .
+            $file = "../app/controllers/" .
              $controllerName . ".php";
             if (file_exists($file)) {
                 require_once $file;

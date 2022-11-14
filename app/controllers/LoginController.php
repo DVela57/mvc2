@@ -2,12 +2,12 @@
 
     class LoginController{
         function __construct () {
-            print "Contructor clase login controller";
+            print "<br>Contructor clase logincontroller";
         }
         function index () {
-            print "dentro clase login controller";
+            print "<br>dentro index clase logincontroller";
         }
-        function login() {
-            print "dentro clase login controller";
+        function show() {
+            print "<br>dentro show clase logincontroller";
         }
     }
