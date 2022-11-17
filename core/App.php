@@ -1,4 +1,5 @@
 <?php
+    namespace Core;
 
     class App {
         function __construct() {
@@ -17,6 +18,7 @@
             } else {
                 $method = "index";
             }
+
             $file = "../app/controllers/" .
              $controllerName . ".php";
             if (file_exists($file)) {
@@ -25,8 +27,9 @@
                 http_response_code(404);
                 die("No encotrado");
             }
-
+            $controllerName = "\\App\\Controllers\\" . $controllerName;
             $controllerObject = new $controllerName();
+
             if (method_exists($controllerObject, $method)) {
                 $controllerObject->$method($arguments);
             } else {

@@ -1,5 +1,5 @@
 <?php
-
+    namespace App\Controllers;
     class LoginController{
         function __construct () {
             print "<br>Contructor clase logincontroller";
