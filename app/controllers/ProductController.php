@@ -1,6 +1,6 @@
 <?php
     namespace App\Controllers;
-    include "../product.php";
+    require "../product.php";
     class ProductController {
 
         function __construct()
@@ -11,14 +11,14 @@
         function index() {
             
             $products = \Product::all();
-            require "../views/home.php";
+            require "../app/views/product.php";
             //metodo home de controller de mvc00
         }
         function show() {
             $id = $_GET["id"];
-            $product = \product::find($id);
+            $product = \Product::find($id);
 
-            require "../views/show.php";
+            require "../app/views/show.php";
             //metodo show de controller de mvc00
         }
 
