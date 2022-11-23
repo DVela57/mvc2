@@ -1,0 +1,19 @@
+{
+    "name": "alumno/mvc",
+    "authors": [
+        {
+            "name": "Diego Vela",
+            "email": "diegotron87@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Models\\": "app/models/"
+        }
+    }
+}
