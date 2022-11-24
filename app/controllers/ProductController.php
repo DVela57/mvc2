@@ -1,9 +1,9 @@
 <?php
     namespace App\Controllers;
     require "../product.php";
-    
+
     use Dompdf\Dompdf;
-     
+    use \App\Models\Product;
     class ProductController {
 
         function __construct()
@@ -13,16 +13,14 @@
 
         function index() {
             
-            $products = \Product::all();
-            require "../app/views/product.php";
+            $products = Product::all();
+            require "../app/views/product/index.php";   
             //metodo home de controller de mvc00
         }
-        function show() {
-            $id = $_GET["id"];
-            $product = \Product::find($id);
-
-            require "../app/views/show.php";
-            //metodo show de controller de mvc00
+        public function show($args) {
+            list($id) = $args;
+            $product = Product::find($id);
+            require('../app/views/product/show.php');
         }
 
         public function pdf() {
